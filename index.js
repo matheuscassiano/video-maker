@@ -9,7 +9,7 @@ async function start(){
     }
 
     content.searchTerm = askAndReturnSearchTerm()
-    content.prefix = askAndReturnPrefix()
+    content.prefix = askAndReturnPrefix(content.searchTerm)
 
     await robots.text(content)
     
@@ -17,9 +17,9 @@ async function start(){
         return readline.question('Type a Wikipedia search term: ')
     }
 
-    function askAndReturnPrefix(){
+    function askAndReturnPrefix(searchTerm){
         const prefixes = ['Who is', 'What is', 'The history of']
-        const selectedPrefixIndex = readline.keyInSelect(prefixes, 'Chose one option: ')
+        const selectedPrefixIndex = readline.keyInSelect(prefixes, `Chose one option for ${searchTerm}: `)
         const selectedPrefixText = prefixes[selectedPrefixIndex]
 
         return selectedPrefixText
