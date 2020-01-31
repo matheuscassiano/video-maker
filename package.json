@@ -4,7 +4,7 @@
   "description": "Projeto open-source para fazer videos automatizados",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,10 @@
   "homepage": "https://github.com/matheuscassiano/video-maker#readme",
   "dependencies": {
     "algorithmia": "^0.3.10",
-    "readline-sync": "^1.4.9",
-    "sbd": "^1.0.15",
+    "googleapis": "^47.0.0",
+    "image-downloader": "^3.5.0",
+    "readline-sync": "^1.4.10",
+    "sbd": "^1.0.16",
     "watson-developer-cloud": "^4.0.1"
   }
 }
